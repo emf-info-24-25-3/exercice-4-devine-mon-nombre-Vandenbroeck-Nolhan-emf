@@ -14,12 +14,12 @@ public class ServiceDevine {
      * Nombre maximum que l'utilisateur peut proposer.
      */
     public final static int MAX_NOMBRE = 100;
-    
+
     /**
      * Nombre minimum que l'utilisateur peut proposer.
      */
     public final static int MIN_NOMBRE = 1;
-    
+
     /**
      * Valeur retournée par la méthode lireValeurProposee() si ce qui a été saisi
      * par l'utilisateur n'est pas convertible
@@ -30,6 +30,7 @@ public class ServiceDevine {
      * Référence au contrôleur de l'application.
      */
     private Controller refCtrl;
+
     /**
      * Constructeur du service.
      * Comme toujours, le travail N°1 consiste à initialiser TOUS nos attributs :-).
@@ -47,7 +48,7 @@ public class ServiceDevine {
      * @return le nombre à deviner aléatoirement choisi
      */
     public int penserAUnNombre() {
-        int randomNumber = (int)(Math.random() * (MAX_NOMBRE - MIN_NOMBRE) + MIN_NOMBRE);
+        int randomNumber = (int) (Math.random() * (MAX_NOMBRE - MIN_NOMBRE) + MIN_NOMBRE);
         return randomNumber;
     }
 

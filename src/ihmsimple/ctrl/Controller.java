@@ -7,7 +7,6 @@ import ihmsimple.services.ServiceDevine;
 import ihmsimple.views.View;
 import java.awt.Color;
 
-
 /**
  * Classe représentant le contrôleur de l'application MVC "IhmSimple".
  * 
@@ -49,7 +48,7 @@ public class Controller {
      * Voir le diagramme de séquence pour l'implémentation de cette méthode.
      */
     public void actionDemarrerNouveauJeu() {
-        nombre =  refServiceDevine.penserAUnNombre();
+        nombre = refServiceDevine.penserAUnNombre();
         refView.afficherStatus("Devinez !", Color.YELLOW);
     }
 
@@ -63,16 +62,16 @@ public class Controller {
             if (valeurProposee != NOMBRE_INVALIDE) {
                 if (valeurProposee < nombre) {
                     refView.afficherStatus("Trop petit!", Color.RED);
-                }else if(valeurProposee > nombre){
-                    refView.afficherStatus("Trop petit!", Color.RED);
-                }else{
+                } else if (valeurProposee > nombre) {
+                    refView.afficherStatus("Trop grand!", Color.RED);
+                } else {
                     refView.afficherStatus("Trouvé !!!", Color.GREEN);
                 }
-            }else{
+            } else {
                 refView.afficherStatus("Entrez un nombre !", Color.YELLOW);
             }
-                }   
         }
+    }
 
     /**
      * Méthode permettant de démarrer l'application.

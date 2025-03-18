@@ -13,15 +13,17 @@ public class IhmSimple {
      * 
      * @param args arguments de la ligne de commande
      */
-    public static void main(String[] args) {
-        new Controller();
-        new ServiceDevine();
-        new View();
-        setRefServiceDevine(refCtrl);
-        setRefView(refView);
-        setRefCtrl(refCtrl);
-        setRefCtrl(refCtrl);
-        start();
-    }
+        public static void main(String[] args) {
 
-}
+            Controller controller = new Controller();
+            ServiceDevine service = new ServiceDevine();
+            controller.setRefServiceDevine(service);
+            View view = new View();
+            controller.setRefView(view);
+            
+            view.setRefCtrl(controller);
+            service.setRefCtrl(controller);
+            
+            controller.start();
+        }
+    }
